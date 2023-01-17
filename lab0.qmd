@@ -11,6 +11,7 @@ editor: visual
 ```{r}
 #| label: load-packages
 #| message: false
+
 library(tidyverse)
 library(datasauRus)
 ```
