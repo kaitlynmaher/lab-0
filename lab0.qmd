@@ -64,7 +64,8 @@ Some more narrative can go here.
 
 ```{r}
 #| label: cor-circle
-# Calculate the correlation here
+circle_data %>%
+  summarize(r = cor(x, y))
 ```
 
 Conclude with some more narrative, if needed.
