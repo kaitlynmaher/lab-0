@@ -87,3 +87,15 @@ datasaurus_dozen |>
 ## Exercise 5
 
 (Add a labeled code chunk and narrative here. Insert code chunks using the "insert chunk" button (a green C with a +). Alternatively, use CMD + OPTION + I (Mac) or CTRL + ALT + I (Windows).)
+
+```{r}
+#| label: ex2-plot-dino
+#| fig-height: 5
+#| fig-width: 5
+dino_data <- datasaurus_dozen %>%
+  filter(dataset == "dino")
+ggplot(data = dino_data, mapping = aes(x = x, y = y)) + 
+  geom_point()
+dino_data |>
+  summarize(r = cor(x, y))
+```
